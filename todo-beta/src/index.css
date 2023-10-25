@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* palete color to design */
+  --t-blue-50: #f2f8f9;
+  --t-blue-100: #deedef;
+  --t-blue-200: #c2dbdf;
+  --t-blue-300: #97c2c9;
+  --t-blue-400: #65a1ab;
+  --t-blue-500: #457c87;
+  --t-blue-600: #406e7a;
+  --t-blue-700: #395b65;
+  --t-blue-800: #354d55;
+  --t-blue-900: #2f414a;
+  --t-blue-950: #1c2a30;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}

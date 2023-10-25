@@ -1,0 +1,44 @@
+@import url("../../index.css");
+
+.t-btn-add {
+  width: 12rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 500;
+  letter-spacing: -1px;
+  background: var(--t-blue-400);
+}
+
+.t-separator {
+  width: 100%;
+  border: 1px solid var(--t-blue-700);
+  margin: 1rem 0;
+}
+
+.t-f-container {
+  height: 20rem;
+  border: 1px solid rgb(55, 170, 107);
+  overflow: hidden;
+  transition:  all 1s;
+}
+.t-f-container-collapsed {
+    height: 0;
+    color: red;
+}
+.t-f-container > form {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+input[type="text"],
+select {
+  width: 20rem;
+}
