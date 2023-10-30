@@ -14,7 +14,7 @@ const TaskForm = ({ todo, addTaskAction }) => {
     title: "",
     description: "",
     completed: false,
-    levels: "",
+    levels: "false",
     time: "",
   });
   // In useEffect(),  we can change the value of the selected task to update.
@@ -31,11 +31,12 @@ const TaskForm = ({ todo, addTaskAction }) => {
   return (
     <div className="t-f-container">
       <form
+        className="t-f-form"
         onSubmit={(e) => {
           e.preventDefault();
           console.log("submit the task to server");
           addTaskAction(task);
-          setTask({ title: "", description: "", levels: "", time: "" });
+          setTask({ title: "", description: "", completed: "", levels: "", time: "" });
         }}
       >
         <input
@@ -45,21 +46,13 @@ const TaskForm = ({ todo, addTaskAction }) => {
           value={task.title}
           onChange={handleChange}
         />
-        <input
+        <textarea
           type="text"
           name="description"
           value={task.description}
-          placeholder="* Description"
+          placeholder="* Description..."
           onChange={handleChange}
         />
-
-        <input
-          type="checkbox"
-          name="completed"
-          value={task.completed}
-          onChange={handleChange}
-        />
-
         <OptionComponent
           name="levels"
           value={task.levels}
@@ -72,8 +65,7 @@ const TaskForm = ({ todo, addTaskAction }) => {
           placeholder="* Time"
           onChange={handleChange}
         />
-
-        <button type="submit">add</button>
+        <button className="t-f-btn-submit" type="submit">Add task</button>
       </form>
     </div>
   );

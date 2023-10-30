@@ -1,6 +1,8 @@
 import React from "react";
 import { LEVELS } from "../../models/levels.enum";
 import PropTypes from 'prop-types';
+// import styles
+import '../../styles/css/select.option.css';
 
 const OptionComponent = ({ onChange, name, value }) => {
   const returnOption = () => {
@@ -12,7 +14,8 @@ const OptionComponent = ({ onChange, name, value }) => {
   };
 
   return (
-    <select name={name} value={value} onChange={onChange}>
+    <select className='t-f-select' name={name} value={value} onChange={onChange}>
+      <option selected>* Level</option>
       {returnOption()}
     </select>
   );

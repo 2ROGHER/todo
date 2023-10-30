@@ -1,0 +1,10 @@
+.t-f-select {
+    margin: .9rem;
+    outline: none;
+    padding: 0.6rem .3rem;
+    border: 1px solid var(--t-blue-700);
+    background: var(--t-blue-800);
+    border-radius: 3px;
+    font-family: "Poppins";
+    
+}

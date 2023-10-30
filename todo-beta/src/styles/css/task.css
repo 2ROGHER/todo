@@ -1,0 +1,74 @@
+
+ul {
+    padding-inline-start:  0;
+}
+.t-ul-container {
+
+}
+
+/* Hidden list-style-type form <li> element */
+li { 
+    list-style-type: none;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0 2rem;
+    padding: .8rem 1rem;
+    margin: 2rem 0;
+    font-family: "Poppins";
+    background: var(--t-blue-800);
+    border-radius: 5px;
+    border: 2px solid var(--t-blue-700);
+}
+
+/* Let's center all div items in the grid */
+li > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the delete and update buttons */
+.t-btn-edit, .t-btn-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 2rem;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .5s linear;
+    font-weight: 500;
+
+}
+
+.t-btn-edit { 
+    background:rgb(255, 160, 0);
+    border: 1px solid #ffa000;
+}
+
+.t-btn-edit:hover {
+    background: #ccc;
+    border: 1px solid #ffa000;
+    color: #222;
+    font-weight: 500;
+}
+
+.t-btn-delete:hover {
+    background: #ccc;
+    border: 1px solid tomato;
+    color: #222;
+    font-weight: 500;
+}
+.t-btn-delete { 
+    background: tomato;
+    border: 1px solid tomato;
+}
+
+/* Styles for the icons */
+li div:nth-child(5) svg, li div:nth-child(6) svg, li div:nth-child(7) svg{
+    padding-right: .5rem;
+    font-size: 18px;
+}
