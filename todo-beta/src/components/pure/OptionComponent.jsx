@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 // import styles
 import "../../styles/css/select.option.css";

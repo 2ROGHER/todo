@@ -1,4 +1,4 @@
-/* Here styles for the <TaskList/> component */
+/* Let's doing styles fon the <TaskList/> component & title */
 .t-container { 
     position: relative;
 }
@@ -9,6 +9,10 @@
     font-family: 'Poppins';
     letter-spacing: -3px;
 }
+
+
+
+
 /* LEt's make styles for 'add' button for the tasks */
 .t-btn-add {
   background: var(--t-blue-700);
@@ -35,4 +39,4 @@
   width: 100%;
   border: 1px solid var(--t-blue-700);
   margin: 0 0 1rem 0;
-}
+} 

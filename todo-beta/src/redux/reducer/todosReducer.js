@@ -1,7 +1,7 @@
-import { ADD_TASK, COMPLETED_TASK, DELETE_TASK, GET_TASK, INCREMENT, UPDATE_TASK } from "../action-types";
+import { ADD_TASK, COMPLETED_TASK, DELETE_TASK } from "../action-types";
 import { LEVELS } from '../../models/levels.enum';
 import { PRIORITY } from "../../models/priority.enum";
-
+console.log(LEVELS.CHALLENGING[2]);
 //Define the initial state of the application fro CRUD actions.
 let initialState = [
     {
@@ -9,8 +9,8 @@ let initialState = [
         title: 'New Task 1',
         description: 'New Task 1 description',
         completed: true,
-        priority: PRIORITY.URGENT,
-        level: LEVELS.NORMAL,
+        priority: PRIORITY.HIGH,
+        level: LEVELS.EASY,
         time: '00:30'
     },
     {
@@ -19,7 +19,7 @@ let initialState = [
         description: 'New Task 2 description',
         completed: true,
         priority: PRIORITY.MEDIUM,
-        level: LEVELS.EXPENSIVE,
+        level: LEVELS.CHALLENGING,
         time: '00:30'
     },
     {
@@ -28,7 +28,7 @@ let initialState = [
         description: 'New Task 3 description',
         completed: false,
         priority: PRIORITY.LOW,
-        level: LEVELS.NORMAL,
+        level: LEVELS.EASY,
         time: '00:30'
     },
     {

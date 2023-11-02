@@ -1,12 +1,12 @@
 .t-filterbar-container { 
     overflow: hidden;
-    background: var(--t-blue-950)
+    background: var(--t-blue-900)
 }
 .t-filterbar-container button {
     padding: .8rem 0rem;
     width: 12rem;
     float: left;
-    background: var(--t-blue-700);
+    background: var(--t-blue-800);
     border: none;
     font-family: "Poppins",sans-serif;
     font-weight: 400;

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import PropTypes from "prop-types";
 // Let's import styles from the '../../styles/css/task.css' file.
 import "../../styles/css/task.css";
@@ -10,34 +9,32 @@ import { CiEdit } from "react-icons/ci";
 const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted,  }) => {
   console.log(data);
   return (
-    <ul className={"t-ul-container"}>
+    <tbody className={"t-table-body"}>
       {data?.map((t, i) => (
-        <li
+        <tr
           id={t.id}
           key={i}
-          className={
-            !t.completed ? "t-li-container" : "completed-task"
-          }
+          className={!t.completed ? "t-body-container" : "completed-task"}
           onClick={() => {
             onCompleted(t.id);
           }}
         >
-          <div>{t.title}</div>
-          <div>{t.description}</div>
-          <div>{t.priority}</div>
-          <div>
+          <td>{t.title}</td>
+          <td>{t.description}</td>
+          <td>{t.priority}</td>
+          <td>
             <input
               type="checkbox"
               name="completed"
               value={t.completed}
               checked={t.completed}
             />
-            {t.level}
-          </div>
-          <div>
+          </td>
+          <td>{t.level}</td>
+          <td>
             <RxLapTimer /> {t.time}
-          </div>
-          <div>
+          </td>
+          <td>
             <button
               className="t-btn-edit"
               onClick={() => onHandleUpdateTask(t.id)}
@@ -45,8 +42,8 @@ const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted,  }) => {
               <CiEdit />
               <span>edit</span>
             </button>
-          </div>
-          <div>
+          </td>
+          <td >
             <button
               className="t-btn-delete"
               onClick={() => {
@@ -57,16 +54,17 @@ const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted,  }) => {
               <RiDeleteBin6Line />
               <span>delete</span>
             </button>
-          </div>
-        </li>
+          </td>
+        </tr>
       ))}
-    </ul>
+    </tbody>
   );
 };
 
 Task.propTypes = {
   data: PropTypes.array,
   onDeleteTask: PropTypes.func.isRequired,
+  onHandleUpdateTask: PropTypes.func.isRequired,
   onCompleted: PropTypes.func.isRequired,
 };
 

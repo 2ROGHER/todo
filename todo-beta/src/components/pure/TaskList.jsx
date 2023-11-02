@@ -1,10 +1,10 @@
-import React from "react";
 import PropTypes from "prop-types";
 import Task from "./Task";
 import TaskFormContainer from "../container/TaskFormContainer";
 // css styles for TaskListComponent.
 import "../../styles/css/task.list.css";
 import FilterBar from "./FilterBar";
+import HeaderList from "./HeaderList";
 
 /**
  *
@@ -27,7 +27,7 @@ const TaskList = ({ todos, updateTaskAction, deleteTaskAction, completeTaskActio
   /**
    * This function allows to handle  the hidden o show of the popup window form
    */
-  const handleClick = (e) => {
+  const handleClick = () => {
     let element = document.querySelector(".t-f-container");
     let x = document.querySelector('.t-btn-add');
 
@@ -45,18 +45,25 @@ const TaskList = ({ todos, updateTaskAction, deleteTaskAction, completeTaskActio
       <FilterBar />
       <div className="t-separator"></div>
       <TaskFormContainer />
-      <Task
-        data={todos}
-        onDeleteTask={deleteTaskAction}
-        onHandleUpdateTask={handleUpdateTask}
-        onCompleted={completeTaskAction}
-      />
+      {/* Here goes the header list */}
+      <table>
+        <HeaderList />
+        <Task
+          data={todos}
+          onDeleteTask={deleteTaskAction}
+          onHandleUpdateTask={handleUpdateTask}
+          onCompleted={completeTaskAction}
+        />
+      </table>
     </div>
   );
 };
 
 TaskList.propTypes = {
   todos: PropTypes.array,
+  updateTaskAction: PropTypes.func.isRequired,
+  deleteTaskAction: PropTypes.func.isRequired,
+  completeTaskAction: PropTypes.func.isRequired,
 };
 
 export default TaskList;

@@ -1,8 +1,6 @@
-export const  LEVELS =  {
+export const LEVELS = {
   EASY: "EASY",
-  NORMAL: "NORMAL",
-  MODERATE: "MODERATE",
+  MEDIUM: "MEDIUM",
   CHALLENGING: "CHALLENGING",
   HARD: "HARD",
-  EXPENSIVE: "EXPENSIVE",
 };
