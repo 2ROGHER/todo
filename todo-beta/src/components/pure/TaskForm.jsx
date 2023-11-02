@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { LEVELS } from "../../models/levels.enum";
 import OptionComponent from "./OptionComponent";
-import { updateTask } from "../../redux/actions";
+import { LEVELS } from "../../models/levels.enum";
+import { PRIORITY } from "../../models/priority.enum";
+
 import '../../styles/css/task.form.css';
 
 const TaskForm = ({ todo, addTaskAction }) => {
   console.log("todos update", todo);
   const [updateTodo] = todo;
-
   const [task, setTask] = useState({
     id: "",
     title: "",
     description: "",
+    priority: "",
     completed: false,
-    levels: "false",
+    level: "false",
     time: "",
   });
   // In useEffect(),  we can change the value of the selected task to update.
@@ -26,8 +27,9 @@ const TaskForm = ({ todo, addTaskAction }) => {
 
   const handleChange = (e) => {
     setTask({ ...task, [e.target.name]: e.target.value });
+    console.log(e.target.name, 'value is: ', e.target.value);
   };
-
+  console.log('estas son las tareas en el form', task);
   return (
     <div className="t-f-container">
       <form
@@ -36,7 +38,14 @@ const TaskForm = ({ todo, addTaskAction }) => {
           e.preventDefault();
           console.log("submit the task to server");
           addTaskAction(task);
-          setTask({ title: "", description: "", completed: "", levels: "", time: "" });
+          setTask({
+            title: "",
+            description: "",
+            completed: false,
+            priority: "",
+            level: "",
+            time: "",
+          });
         }}
       >
         <input
@@ -54,9 +63,16 @@ const TaskForm = ({ todo, addTaskAction }) => {
           onChange={handleChange}
         />
         <OptionComponent
-          name="levels"
-          value={task.levels}
+          name="level"
+          value={task.level}
           onChange={handleChange}
+          priority={LEVELS}
+        />
+        <OptionComponent
+          name="priority"
+          value={task.priority}
+          onChange={handleChange}
+          priority={PRIORITY}
         />
         <input
           type="text"
@@ -65,7 +81,9 @@ const TaskForm = ({ todo, addTaskAction }) => {
           placeholder="* Time"
           onChange={handleChange}
         />
-        <button className="t-f-btn-submit" type="submit">Add task</button>
+        <button className="t-f-btn-submit" type="submit">
+          Add task
+        </button>
       </form>
     </div>
   );

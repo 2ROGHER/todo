@@ -9,6 +9,7 @@ export const DELETE_TASK = 'DELETE_TASK';
 export const GET_TASKS = 'GET_TASKS';
 export const COMPLETED_TASK = 'COMPLETED_TASK';
 
-// Test to coounter 
+// Action types to filter the tasks.
+export const FILTER_TASKS = 'FILTER_TASKS';
 
 export const INCREMENT = 'INCREMENT';

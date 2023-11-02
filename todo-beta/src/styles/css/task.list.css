@@ -1,4 +1,4 @@
-
+/* Here styles for the <TaskList/> component */
 .t-container { 
     position: relative;
 }
@@ -8,4 +8,31 @@
     font-size: 3rem;
     font-family: 'Poppins';
     letter-spacing: -3px;
+}
+/* LEt's make styles for 'add' button for the tasks */
+.t-btn-add {
+  background: var(--t-blue-700);
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  border-radius: 3px;
+  bottom: 5rem;
+  right: 5rem;
+  border: none;
+  outline: none;
+  font-size: 80px;
+  transition: all 0.3s ease-in;
+  text-align: center;
+  cursor: pointer;
+}
+
+.active { 
+  background: transparent;
+  transform: rotate(45deg) scale(.9);
+}
+/* Styles for the separator line */
+.t-separator {
+  width: 100%;
+  border: 1px solid var(--t-blue-700);
+  margin: 0 0 1rem 0;
 }

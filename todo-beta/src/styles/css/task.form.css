@@ -1,29 +1,5 @@
 @import url("../../index.css");
-/* LEt's make styles for 'add' button for the tasks */
-.t-btn-add {
-  width: 120px;
-  height: 120px;
-  position: fixed;
-  border-radius: 3px;
-  bottom: 5rem;
-  right: 5rem;
-  border: none;
-  outline: none;
-  font-size: 80px;
-  transition: all 0.5s ease-in;
-  text-align: center;
-}
-.t-btn-add:hover {
-  background: #aaa;
-  transform: scale(0.9);
-  color: #777;
-}
-/* Styles for the separator line */
-.t-separator {
-  width: 100%;
-  border: 1px solid var(--t-blue-700);
-  margin: 1rem 0;
-}
+
 
 /* Styles for the 'form' container see in <TaskForm/> component */
 .t-f-container {
@@ -46,7 +22,7 @@
 .t-f-container-popup {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 /* Styles form the form's elements */
@@ -56,23 +32,7 @@
    padding: 2rem;
 }
 /* Styles for the <input> element */ 
-.t-btn-close {
-  width: 45px;
-  height: 45px;
-  display: block;
-  position: absolute;
-  top:0;
-  right: 1rem;
-  font-family: "Poppins";
-  font-weight: 300;
-  font-size: 30px;
-  text-align: center;
-  padding-inline: 0;
-  padding-block: 0;
-  border-width: 0;
-  background: transparent;
-  cursor: pointer;
-}
+
 input[type="text"] {
   height: 30px;
   outline: none;
@@ -112,5 +72,6 @@ input[type="text"]::placeholder, textarea::placeholder {
   border: none;
   border-radius: 5px;
 }
+
 
 

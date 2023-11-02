@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { todosReducer } from "./todosReducer";
 import { counterReducer } from "./counterReducer";
 import { updateReducer } from "./updateReducer";
+import { filterReducer } from "./filterReducer";
 
 // Let's implements the "rootReducer"
 export const rootReducer = combineReducers(
@@ -11,5 +12,6 @@ export const rootReducer = combineReducers(
         todosState: todosReducer,
         countState: counterReducer,
         updateState: updateReducer,
+        filterState: filterReducer,
     }
 )

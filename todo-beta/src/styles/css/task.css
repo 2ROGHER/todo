@@ -21,11 +21,28 @@ li {
     border: 2px solid var(--t-blue-700);
 }
 
+
+
 /* Let's center all div items in the grid */
 li > div {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Let's make styles for completed task mode */
+.completed-task {
+    background-color: #494949;
+    border: 2px solid #333;
+    color: #999;
+}
+li.completed-task div:nth-child(-n+5) {
+    text-decoration: line-through;
+}
+
+li.completed-task div:nth-child(n+6) > button{
+    background: #444;
+    color: #999;
 }
 
 /* Styles for the delete and update buttons */
@@ -41,6 +58,7 @@ li > div {
     cursor: pointer;
     transition: all .5s linear;
     font-weight: 500;
+    text-decoration: none;
 
 }
 
