@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.active { 
+.active-cross-btn { 
   background: transparent;
   transform: rotate(45deg) scale(.9);
 }

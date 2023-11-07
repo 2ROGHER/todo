@@ -6,8 +6,7 @@ import { RxLapTimer } from "react-icons/rx";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { CiEdit } from "react-icons/ci";
 
-const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted,  }) => {
-  console.log(data);
+const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted, handleEditTask }) => {
   return (
     <tbody className={"t-table-body"}>
       {data?.map((t, i) => (
@@ -37,7 +36,10 @@ const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted,  }) => {
           <td>
             <button
               className="t-btn-edit"
-              onClick={() => onHandleUpdateTask(t.id)}
+              onClick={() => {
+                onHandleUpdateTask(t.id);
+                handleEditTask();
+              }}
             >
               <CiEdit />
               <span>edit</span>
@@ -66,6 +68,7 @@ Task.propTypes = {
   onDeleteTask: PropTypes.func.isRequired,
   onHandleUpdateTask: PropTypes.func.isRequired,
   onCompleted: PropTypes.func.isRequired,
+  handleEditTask: PropTypes.func.isRequired,
 };
 
 export default Task;

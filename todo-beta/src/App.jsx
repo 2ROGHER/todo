@@ -3,6 +3,7 @@ import Home from './pages/home/Home'
 import './App.css'
 import TaskContainer from './components/container/TaskContainer'
 import Test from './pages/test/Test';
+import LoginPage from './pages/auth/LoginPage';
 
 /**
  * @returns React.Component
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route exact path="/tasks" element={<TaskContainer />} />
         <Route path="/test" element={<Test />} />
+        <Route path='/login' element={<LoginPage />} />
       </Routes>
     </>
   );

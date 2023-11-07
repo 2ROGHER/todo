@@ -7,7 +7,6 @@ import { PRIORITY } from "../../models/priority.enum";
 import '../../styles/css/task.form.css';
 
 const TaskForm = ({ todo, addTaskAction }) => {
-  console.log("todos update", todo);
   const [updateTodo] = todo;
   const [task, setTask] = useState({
     id: "",
@@ -18,8 +17,15 @@ const TaskForm = ({ todo, addTaskAction }) => {
     level: "false",
     time: "",
   });
-  // In useEffect(),  we can change the value of the selected task to update.
 
+  const handleSubmit = () => {
+    // This code allows to hidden the popup window from the view, when the user click 
+    // in the submit button
+    document.querySelector('.t-f-container').classList.remove('t-f-container-popup');
+    // Let's change the animation of the close 'button' when the user make 'click' in submit button.
+    document.querySelector('.t-btn-add').classList.remove('active-cross-btn');
+  };
+  // In useEffect(),  we can change the value of the selected task to update.
   useEffect(() => {
     updateTodo &&
       setTask({ ...updateTodo});
@@ -29,7 +35,6 @@ const TaskForm = ({ todo, addTaskAction }) => {
     setTask({ ...task, [e.target.name]: e.target.value });
     console.log(e.target.name, 'value is: ', e.target.value);
   };
-  console.log('estas son las tareas en el form', task);
   return (
     <div className="t-f-container">
       <form
@@ -46,6 +51,8 @@ const TaskForm = ({ todo, addTaskAction }) => {
             level: "",
             time: "",
           });
+          // Execute the `handleSubmit` function to hidden the popup window from the view.
+          handleChange();
         }}
       >
         <input
@@ -81,7 +88,7 @@ const TaskForm = ({ todo, addTaskAction }) => {
           placeholder="* Time"
           onChange={handleChange}
         />
-        <button className="t-f-btn-submit" type="submit">
+        <button onClick={handleSubmit} className="t-f-btn-submit" type="submit">
           Add task
         </button>
       </form>

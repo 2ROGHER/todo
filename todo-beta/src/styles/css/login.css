@@ -1,0 +1,149 @@
+.t-login-container {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styles for the logo of the <Login/> component */
+.t-login-logo {
+  border: 1px solid blue;
+  position: fixed;
+  top: 2rem;
+  left: 5rem;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Styles for the .login-box */
+.t-login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--t-blue-950);
+  border: 1px solid var(--t-blue-900);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+/* Styles for the login title */
+.t-login-title {
+  text-transform: capitalize;
+}
+
+/* Styles for the separator line */
+h1 + span {
+  background: var(--t-blue-700);
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 1rem 0;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 15rem;
+  padding: 0.7rem 1.9rem;
+  margin: 0 0 2rem 0rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  outline: none;
+  border-radius: 3px;
+  background-color: var(--t-blue-900);
+  border: none;
+
+  color: var(--t-blue-200);
+}
+input[type="email"] {
+  background-image: url("../../assets/svg/email.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+input[type="password"] {
+  background-image: url("../../assets/svg/lock.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #ddd !important;
+}
+form {
+  display: block;
+  color: var(--t-blue-100);
+}
+/* Styles for the login button */
+.t-login-btn button {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  color: var(--t-blue-100);
+  font-size: 15px;
+  background: var(--t-blue-600);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+/* Styles for the 'remember' input */
+.t-l-row-4 {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.t-l-row-4 > span {
+  color: var(--t-blue-100);
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+/* styles for the 'or login with ' element */
+.t-l-row-5 {
+  display: inherit;
+  width: 100%;
+  display: flex;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+.t-l-row-5::after {
+  content: "";
+  height: 1.2px;
+  margin-left: 1rem;
+  background-color: var(--t-blue-700);
+  flex: 1;
+}
+.t-l-row-5::before {
+  content: "";
+  height: 1.2px;
+  margin-right: 1rem;
+
+  background-color: var(--t-blue-700);
+  flex: 1;
+}
+/* Styles for the login with services - google, facebook, github - */
+.t-l-row-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem 0;
+}
+
+.t-l-row-6 button {
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.t-l-row-6 button svg  {
+    font-size: 25px;
+    object-fit: cover;
+}
+.t-l-row-7 {
+    font-size: 13.5px;
+    margin-bottom: 2rem;
+}
