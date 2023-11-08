@@ -4,6 +4,7 @@ import './App.css'
 import TaskContainer from './components/container/TaskContainer'
 import Test from './pages/test/Test';
 import LoginPage from './pages/auth/LoginPage';
+import SignInPage from './pages/auth/SiginPage';
 
 /**
  * @returns React.Component
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/tasks" element={<TaskContainer />} />
         <Route path="/test" element={<Test />} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/sign-in' element={<SignInPage />} />
       </Routes>
     </>
   );

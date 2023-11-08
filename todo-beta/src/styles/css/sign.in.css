@@ -1,0 +1,57 @@
+.t-signin-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+.t-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+/* Lets make styles for form box */
+.t-signin-box {
+    border: 1px solid var(--t-blue-800);
+    background: var(--t-blue-950);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    border-radius: 3px;
+}
+
+.t-signin-box h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.t-signin-box span {
+    background: var(--t-blue-700);
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 1rem 0rem;
+}
+/* Styles for input fields */
+input[type="email"],
+input[type="password"], input[name="phone"], input[name="name"] {
+  width: 15rem;
+  padding: 0.7rem 1.9rem;
+  margin: 0 0 2rem 0rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  outline: none;
+  border-radius: 3px;
+  background-color: var(--t-blue-900);
+  border: none;
+
+  color: var(--t-blue-200);
+}
+
+input[name="name"] {
+    background-image: url();
+}

@@ -6,6 +6,7 @@ import "../../styles/css/login.css";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import emailValidator from "../../utils/validators/emailValidator";
 
 const Login = ({ textBtn }) => {
   // Define the local state for the user credentials.
@@ -14,6 +15,8 @@ const Login = ({ textBtn }) => {
     password: "",
     remember: "",
   });
+
+  console.log(emailValidator(auth.email));
 
   const handleLoginSubmit = () => {
     console.log("hola");
@@ -35,6 +38,12 @@ const Login = ({ textBtn }) => {
                 setAuth({ ...auth, [e.target.name]: e.target.value })
               }
             />
+
+            {/* // Here goes the validator item for the email input */}
+            
+            {
+              emailValidator(auth.email) ? <div>{emailValidator(auth.email)}</div> : null 
+            }
           </div>
 
           <div className="t-f-login-password t-l-row-2">
@@ -57,21 +66,19 @@ const Login = ({ textBtn }) => {
           </div>
           <span className="t-l-row-5">Or login with</span>
           <div className="t-l-row-6">
-            <button>
+            <button className="btn-fb">
               <BsFacebook />
             </button>
-            <button>
+            <button className="btn-google">
               <FcGoogle />
             </button>
-            <button>
+            <button className="btn-github">
               <FaGithub />
             </button>
           </div>
           <div className="t-l-row-7">
-            <span>
-              Are you new here,
-              <a href="#">sign in</a>
-            </span>
+            <span>Are you new here,</span>
+            <a href="#">sign in</a>
           </div>
         </form>
       </div>
