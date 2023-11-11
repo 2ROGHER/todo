@@ -5,6 +5,9 @@ import TaskFormContainer from "../container/TaskFormContainer";
 import "../../styles/css/task.list.css";
 import FilterBar from "./FilterBar";
 import HeaderList from "./HeaderList";
+import LoginVerification from "./login.popup/LoginVerification";
+import LoginVerificationContainer from "../container/LoginVerificationContainer";
+import { useState } from "react";
 
 /**
  *
@@ -13,7 +16,13 @@ import HeaderList from "./HeaderList";
  * @param {Function} deleteTaskAction - Dispatch function to delete the list of tasks.
  * @returns
  */
-const TaskList = ({ todos, updateTaskAction, deleteTaskAction, completeTaskAction }) => {
+const TaskList = ({
+  todos,
+  updateTaskAction,
+  deleteTaskAction,
+  completeTaskAction,
+}) => {
+  const [loginUser, setLoginUser] = useState(true);
 
   /**
    * This function allows us update a determinate task of the list of tasks.
@@ -21,14 +30,15 @@ const TaskList = ({ todos, updateTaskAction, deleteTaskAction, completeTaskActio
    */
   const handleUpdateTask = (e) => {
     // This code line allows us to active the popup window while we press the 'edit' button.
-    document.querySelector('.t-f-container').classList.add('t-f-container-popup');
+    document
+      .querySelector(".t-f-container")
+      .classList.add("t-f-container-popup");
     // This code allows us to activate the animation from the 'close' button for the popup window.
-    document.querySelector('.t-btn-add').classList.add('active-cross-btn');
+    document.querySelector(".t-btn-add").classList.add("active-cross-btn");
     // This code line allows us update the tasks in the same form that we use to create a new task.
     const arr = todos.filter((t) => t.id === e);
     updateTaskAction(...arr);
   };
-
 
   /**
    * This function allows us to handle  the hidden o show of the popup window form
@@ -36,12 +46,12 @@ const TaskList = ({ todos, updateTaskAction, deleteTaskAction, completeTaskActio
    */
   const handleClick = () => {
     let element = document.querySelector(".t-f-container");
-    let x = document.querySelector('.t-btn-add');
+    let x = document.querySelector(".t-btn-add");
 
     // This code is used to toggle the open and close the popup window.
     element.classList.toggle("t-f-container-popup");
     // let's move the "+" charactet to "x"
-    x.classList.toggle('active-cross-btn');
+    x.classList.toggle("active-cross-btn");
   };
 
   /**
@@ -51,9 +61,9 @@ const TaskList = ({ todos, updateTaskAction, deleteTaskAction, completeTaskActio
    * @return {*} void.
    */
   const handleEditTask = () => {
-    console.log('clicked at the edit task button');
-    var tr = document.getElementsByTagName('tr')[1]
-    console.log('this is the node ', tr);
+    console.log("clicked at the edit task button");
+    var tr = document.getElementsByTagName("tr")[1];
+    console.log("this is the node ", tr);
     tr.className === "completed-task"
       ? (tr.className = "t-body-container")
       : null;
@@ -61,6 +71,8 @@ const TaskList = ({ todos, updateTaskAction, deleteTaskAction, completeTaskActio
   };
   return (
     <div className="t-container">
+      {loginUser ? <LoginVerificationContainer /> : null}
+
       <h1 className="t-title">task to do</h1>
       <button onClick={handleClick} className="t-btn-add">
         <span id="cross">&#43;</span>

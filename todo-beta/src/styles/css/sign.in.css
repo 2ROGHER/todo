@@ -1,44 +1,51 @@
 .t-signin-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 .t-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
 }
 /* Lets make styles for form box */
 .t-signin-box {
-    border: 1px solid var(--t-blue-800);
-    background: var(--t-blue-950);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem 2rem;
-    border-radius: 3px;
+  border: 1px solid var(--t-blue-800);
+  background: var(--t-blue-950);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  border-radius: 3px;
 }
 
 .t-signin-box h2 {
-    text-transform: capitalize;
-    font-size: 30px;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 600;
 }
-.t-signin-box span {
-    background: var(--t-blue-700);
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin: 1rem 0rem;
+.t-signin-box #t-s-separator {
+  background: var(--t-blue-700);
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 2rem 0rem;
+}
+/* Let's make .t-s-row-3 and .t-s-row-4 relative containers */
+.t-s-row-3, .t-s-row-4 {
+    position: relative;
 }
 /* Styles for input fields */
 input[type="email"],
-input[type="password"], input[name="phone"], input[name="name"] {
+input[type="password"],
+input[name="phone"],
+input[name="name"] {
   width: 15rem;
   padding: 0.7rem 1.9rem;
   margin: 0 0 2rem 0rem;
@@ -48,10 +55,64 @@ input[type="password"], input[name="phone"], input[name="name"] {
   border-radius: 3px;
   background-color: var(--t-blue-900);
   border: none;
-
-  color: var(--t-blue-200);
+  color: #858585
 }
-
+input[type="email"] {
+    background-image: url('../../assets/svg/email.svg');
+}
+/* Styles for input name field */
 input[name="name"] {
-    background-image: url();
+  background-image: url("../../assets/svg/text.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+input[name="name"]::placeholder {
+  color: #858585;
+}
+/* Styles for phone input field */
+input[name="phone"] {
+  background-image: url("../../assets/svg/phone.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+input[name="passwordConfirm"] {
+    background-image: url('../../assets/svg/lock1.svg');
+}
+ 
+.t-s-row-3::after, .t-s-row-4::after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 1rem;
+    top: .7rem;
+    background-image: url('../../assets/svg/eyes.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*Styles for 'terms & conditions' input */
+.t-s-row-6 {
+    font-size: 13px;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+/* Styles for create button component */
+.t-s-row-7 button  {
+    padding: .8rem 1rem;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    background: var(--t-blue-700);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .15s linear;
+    margin: 1.5rem 0;
+    font-size: 15px;
+}
+.t-s-row-7 button:hover {
+    background: var(--t-blue-200);
+    color: #222;
+    font-weight: 600;
 }

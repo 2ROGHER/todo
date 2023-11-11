@@ -1,0 +1,36 @@
+.t-l-v-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+}
+.t-l-v-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--t-blue-950);
+    padding: 1rem 2rem;
+    border: 1px solid var(--t-blue-700);
+}
+
+.t-l-v-box button {
+    padding: .8rem 4rem;
+    font-family: "Poppins";
+    text-transform: capitalize;
+    background: var(--t-blue-600);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.t-l-v-box button:hover {
+    background: #494949;
+}
+/* .active {
+    position: absolute;
+    transform: translate(0, -100%);
+} */

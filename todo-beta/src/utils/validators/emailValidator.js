@@ -1,14 +1,9 @@
-
-const regx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// Let's define th basic regex patter to test the input values for 'email' field.
+const regex = /^[\w.-]+@[\w.-]+\.\w{2,}$/;
 
 const emailValidator = (email) => {
-    console.log('the email is valid:', email.length);
-    if(!email.length) return 'Email field is empty';
-
-    if(email.length < 5) return 'Email is too short';
-
-    if(!email.match(regx)) return 'Email is invalid';
-    return null;
+    if(!email.length) return 'Email is empty, fill the input field';
+    if(!regex.test(email)) return 'Email invalid, fix or choose another one!';
 };
 
 export default emailValidator;

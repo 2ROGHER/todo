@@ -6,20 +6,33 @@ import "../../styles/css/login.css";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import emailValidator from "../../utils/validators/emailValidator";
+
+// 1. Let's import the auth methods to work with Firebase
+import {
+  getAuth,
+  FacebookAuthProvider,
+  GoogleAuthProvider,
+} from "firebase/auth";
+
+// 2. We need to import the 'firebase app' to user in the project.
+import { app } from "../../firebase/index.js";
+import signWithGoogleService from "../../auth/googleAuth.js";
+import signWithFacebookService from "../../auth/facebookAuth.js";
+import signWithGithubService from "../../auth/githubAuth.js";
+
+// 3. We need to initialize the Firebase Authentication and get a reference to the service.
+const auth = getAuth(app);
 
 const Login = ({ textBtn }) => {
   // Define the local state for the user credentials.
-  const [auth, setAuth] = useState({
+  const [user, setUser] = useState({
     email: "",
     password: "",
     remember: "",
   });
 
-  console.log(emailValidator(auth.email));
-
-  const handleLoginSubmit = () => {
-    console.log("hola");
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
   };
   return (
     <div className="t-login-container">
@@ -32,28 +45,22 @@ const Login = ({ textBtn }) => {
             <input
               type="email"
               name="email"
-              value={auth.email}
+              value={user.email}
               placeholder="Email"
               onChange={(e) =>
-                setAuth({ ...auth, [e.target.name]: e.target.value })
+                setUser({ ...user, [e.target.name]: e.target.value })
               }
             />
-
-            {/* // Here goes the validator item for the email input */}
-            
-            {
-              emailValidator(auth.email) ? <div>{emailValidator(auth.email)}</div> : null 
-            }
           </div>
 
           <div className="t-f-login-password t-l-row-2">
             <input
               type="password"
               name="password"
-              value={auth.password}
+              value={user.password}
               placeholder="Password"
               onChange={(e) =>
-                setAuth({ ...auth, [e.target.name]: e.target.value })
+                setUser({ ...user, [e.target.name]: e.target.value })
               }
             />
           </div>
@@ -61,18 +68,26 @@ const Login = ({ textBtn }) => {
             <button type="submit">login</button>
           </div>
           <div className="t-l-row-4">
-            <input type="checkbox" name="remember" value={auth.remember} />
+            <input type="checkbox" name="remember" value={user.remember} />
             <span>remember</span>
           </div>
           <span className="t-l-row-5">Or login with</span>
           <div className="t-l-row-6">
-            <button className="btn-fb">
+            <button
+              className="btn-fb"
+              onClick={() =>
+                signWithFacebookService(auth)
+              }
+            >
               <BsFacebook />
             </button>
-            <button className="btn-google">
+            <button
+              className="btn-google"
+              onClick={() => signWithGoogleService(auth)}
+            >
               <FcGoogle />
             </button>
-            <button className="btn-github">
+            <button className="btn-github" onClick={() => signWithGithubService(auth)}>
               <FaGithub />
             </button>
           </div>

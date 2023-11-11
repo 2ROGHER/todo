@@ -5,6 +5,7 @@ import TaskContainer from './components/container/TaskContainer'
 import Test from './pages/test/Test';
 import LoginPage from './pages/auth/LoginPage';
 import SignInPage from './pages/auth/SiginPage';
+import LoginVerification from './components/pure/login.popup/LoginVerification';
 
 /**
  * @returns React.Component
@@ -22,6 +23,7 @@ function App() {
         <Route path="/test" element={<Test />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/sign-in' element={<SignInPage />} />
+        <Route path='/test-login' element={<LoginVerification />} />
       </Routes>
     </>
   );
