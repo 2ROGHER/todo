@@ -1,0 +1,23 @@
+.t-searchbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+.t-searchbar-container input {
+  width: 400px;
+  padding: .9rem 2.5rem;
+  outline: none;
+  border: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 15px;
+  font-family: "Poppins";
+   background-image: url("../../../assets/svg/search.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  font-weight: 500;
+}
+

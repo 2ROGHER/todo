@@ -33,7 +33,7 @@
 }
 /* Styles for the <input> element */ 
 
-input[type="text"] {
+/* input[type="text"] {
   height: 30px;
   outline: none;
   padding: .3rem;
@@ -42,7 +42,7 @@ input[type="text"] {
   background: var(--t-blue-800);
   border: 1px solid var(--t-blue-700);
   border-radius: 5px;
-}
+} */
 textarea {
   height: 120px;
   border: none;
@@ -56,9 +56,9 @@ textarea {
   resize: none;
   
 }
-input[type="text"]::placeholder, textarea::placeholder {
+/* input[type="text"]::placeholder, textarea::placeholder {
   color: var(--t-blue-100);
-}
+} */
 
 /* Styles for the add button */
 .t-f-btn-submit {

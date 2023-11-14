@@ -4,7 +4,7 @@ import {
   deleteTask,
   updateTask,
 } from "../../redux/actions/index.js";
-import TaskList from "../pure/TaskList.jsx";
+import TaskList from "../pure/taskList/TaskList.jsx";
 
 const filterTasks = (todos, filter) => {
   switch (filter) {

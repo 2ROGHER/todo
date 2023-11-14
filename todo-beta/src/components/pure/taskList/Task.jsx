@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 // Let's import styles from the '../../styles/css/task.css' file.
-import "../../styles/css/task.css";
+import "./task.css";
 
 import { RxLapTimer } from "react-icons/rx";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { CiEdit } from "react-icons/ci";
-
+import { FiEdit2 } from "react-icons/fi";
 const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted, handleEditTask }) => {
   return (
     <tbody className={"t-table-body"}>
@@ -13,7 +12,7 @@ const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted, handleEditT
         <tr
           id={t.id}
           key={i}
-          className={!t.completed ? "t-body-container" : "completed-task"}
+          className={!t.completed ? "t-table-body-row" : "completed-task"}
           onClick={() => {
             onCompleted(t.id);
           }}
@@ -41,11 +40,9 @@ const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted, handleEditT
                 handleEditTask();
               }}
             >
-              <CiEdit />
-              <span>edit</span>
+              <FiEdit2 />
             </button>
-          </td>
-          <td >
+
             <button
               className="t-btn-delete"
               onClick={() => {
@@ -54,7 +51,6 @@ const Task = ({ data, onDeleteTask, onHandleUpdateTask, onCompleted, handleEditT
               }}
             >
               <RiDeleteBin6Line />
-              <span>delete</span>
             </button>
           </td>
         </tr>

@@ -5,15 +5,25 @@
 
 
 tbody.t-table-body {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    font-weight: 500;
+    color: hsla(221, 13%, 46%, .8)
 }
 
 .t-table-body tr {
-    background: var(--t-blue-700);
+    background: #fff;
+    border-bottom: 1px solid #EAECF0;
 }
 
 .t-table-body tr td {
-    text-align: center;
+    padding: .1rem 1rem;
+}
+/* Let's align center the select columns */
+
+
+.t-table-body tr td:nth-child(2) {
+    overflow: hidden;
+    width: 260px;
 }
 .t-table-body tr td:nth-child(2) {
     overflow: hidden;
@@ -38,44 +48,50 @@ tr.completed-task .t-btn-edit {
 
 /* Styles for the delete and update buttons */
 .t-btn-edit, .t-btn-delete {
-    padding: .5rem 2rem;
     font-family: "Poppins";
-    text-transform: uppercase;
     outline: none;
-    border-radius: 3px;
+    border: none;
     cursor: pointer;
-    transition: all .3s linear;
-    font-weight: 500;
-    text-decoration: none;
-    margin: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: 50px;
+    height: 50px;
+}
+tbody tr td:nth-child(7) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.t-btn-edit > svg {
+    stroke: rgba(0, 0,0, .7);
+    font-size: 18px;
 }
 
+ .t-btn-delete > svg {
+    fill: rgba(0, 0, 0, .7);
+    font-size: 18px;
+ }
+
+
 .t-btn-edit { 
-    background:rgb(255, 160, 0);
-    border: 1px solid #ffa000;
+    margin-right: 2rem;
 }
 
 .t-btn-edit:hover {
-    background: #ccc;
-    border: 1px solid #ffa000;
-    color: #222;
-    font-weight: 500;
+   
 }
 
 .t-btn-delete:hover {
-    background: #ccc;
-    border: 1px solid tomato;
-    color: #222;
-    font-weight: 500;
+   
 }
 .t-btn-delete { 
-    background: tomato;
-    border: 1px solid tomato;
+    
 }
 
 /* Styles for the icons */
 td:nth-child(n+7) button svg {
-    font-size: 15px;
     margin-right: .5rem;
 }  
 

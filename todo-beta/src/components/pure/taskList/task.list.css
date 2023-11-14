@@ -1,13 +1,14 @@
 /* Let's doing styles fon the <TaskList/> component & title */
+
 .t-container { 
     position: relative;
+    padding: 1rem 6rem; /* Imporntntae to establecing the padding */
 }
 .t-title { 
-    color: #eee;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: 'Poppins';
-    letter-spacing: -3px;
+    font-family: Manrope;
+    font-weight: 800;
+    color: rgba(0, 0, 0, .8);
+    font-size: 50px; /* important for the responsive disign, view here */
 }
 
 
@@ -21,7 +22,7 @@
   position: fixed;
   border-radius: 3px;
   bottom: 5rem;
-  right: 5rem;
+  right: 6rem;
   border: none;
   outline: none;
   font-size: 80px;
@@ -34,9 +35,16 @@
   background: transparent;
   transform: rotate(45deg) scale(.9);
 }
-/* Styles for the separator line */
-.t-separator {
+
+/* Styles for the main task list table */
+
+table {
+  border: 1px solid #EAECF0;
   width: 100%;
-  border: 1px solid var(--t-blue-700);
-  margin: 0 0 1rem 0;
-} 
+  font-family: Montserrat;
+  border-collapse: collapse;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, .1);
+}
+
+
+

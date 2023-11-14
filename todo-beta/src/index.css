@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,17 +20,18 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* palete color to design */
-  --t-blue-50: #f2f8f9;
-  --t-blue-100: #deedef;
-  --t-blue-200: #c2dbdf;
-  --t-blue-300: #97c2c9;
-  --t-blue-400: #65a1ab;
-  --t-blue-500: #457c87;
-  --t-blue-600: #406e7a;
-  --t-blue-700: #395b65;
-  --t-blue-800: #354d55;
-  --t-blue-900: #2f414a;
-  --t-blue-950: #1c2a30;
+  --index-color: #fafafa;
+  --t-blue-25: #f5fbff;
+  --t-blue-50: #f0f9ff;
+  --t-blue-100: #e0f2fe;
+  --t-blue-200: #b9e6fe;
+  --t-blue-300: #7cd4fd;
+  --t-blue-400: #36bffa;
+  --t-blue-500: #0ba5ec;
+  --t-blue-600: #0086c9;
+  --t-blue-700: #026aa2;
+  --t-blue-800: #065986;
+  --t-blue-900: #0b4a6f;
 }
 
 body {
@@ -32,4 +39,5 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  background: var(--index-color);
 }

@@ -1,16 +1,2 @@
-table {
-    width: 100%;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-}
-.t-header-row-1 {
-    background: #444;
-}
-.t-header-row-1 th {
-    padding: .8rem 1rem;
-    color: var(--t-blue-50);
-    text-transform: capitalize;
-    font-weight: 400;
-    letter-spacing: .5px;
-}
+
 

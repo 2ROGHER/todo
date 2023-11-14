@@ -6,6 +6,7 @@ import Test from './pages/test/Test';
 import LoginPage from './pages/auth/LoginPage';
 import SignInPage from './pages/auth/SiginPage';
 import LoginVerification from './components/pure/login.popup/LoginVerification';
+import Nav from './layouts/navbar/Nav';
 
 /**
  * @returns React.Component
@@ -18,7 +19,8 @@ function App() {
       {/* <TaskContainer /> */}
       
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />}>
+        </Route>
         <Route exact path="/tasks" element={<TaskContainer />} />
         <Route path="/test" element={<Test />} />
         <Route path='/login' element={<LoginPage />} />

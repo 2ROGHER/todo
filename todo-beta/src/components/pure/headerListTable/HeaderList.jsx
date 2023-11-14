@@ -1,5 +1,5 @@
 // Let's import the styles from '../../styles/css/header.list.css;
-import '../../styles/css/header.list.css';
+import './header.list.css';
 
 const HeaderList = () => {
   return (
@@ -11,7 +11,7 @@ const HeaderList = () => {
             <th>completed</th>
             <th>level</th>
             <th>time</th>
-            <th colSpan={2}>options</th>
+            <th colSpan={2}></th>
         </tr>
     </thead>
   );

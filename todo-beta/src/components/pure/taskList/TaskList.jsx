@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import Task from "./Task";
-import TaskFormContainer from "../container/TaskFormContainer";
+import TaskFormContainer from "../../container/TaskFormContainer";
 // css styles for TaskListComponent.
-import "../../styles/css/task.list.css";
-import FilterBar from "./FilterBar";
-import HeaderList from "./HeaderList";
-import LoginVerification from "./login.popup/LoginVerification";
-import LoginVerificationContainer from "../container/LoginVerificationContainer";
+import "./task.list.css";
+
+import FilterBar from '../filter/FilterBar';
+import HeaderList from "../../pure/headerListTable/HeaderList";
+import LoginVerification from "../login.popup/LoginVerification";
+import LoginVerificationContainer from "../../container/LoginVerificationContainer";
 import { useState } from "react";
 
 /**
@@ -71,14 +72,13 @@ const TaskList = ({
   };
   return (
     <div className="t-container">
-      {loginUser ? <LoginVerificationContainer /> : null}
+      {/* {loginUser ? <LoginVerificationContainer /> : null} */}
 
-      <h1 className="t-title">task to do</h1>
+      <h1 className="t-title">Tasks for today</h1>
       <button onClick={handleClick} className="t-btn-add">
         <span id="cross">&#43;</span>
       </button>
       <FilterBar />
-      <div className="t-separator"></div>
       <TaskFormContainer />
       {/* Here goes the header list */}
       <table>

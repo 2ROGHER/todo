@@ -1,8 +1,8 @@
-import FilterContainer from '../container/FilterContainer';
+import FilterContainer from '../../container/FilterContainer';
 
 const FilterOptions = () => {
     return (
-      <div>
+      <div className='t-btngroup-container'>
         <FilterContainer filter="SHOW_ALL">all</FilterContainer>
         <FilterContainer filter="PRIORITY">priority</FilterContainer>{" "}
         <FilterContainer filter="LEVEL">level</FilterContainer>{" "}

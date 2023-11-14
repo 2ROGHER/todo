@@ -2,117 +2,105 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100vh;
-  font-family: "Poppins", sans-serif;
+  width: 100vw;
 }
-.t-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-}
-/* Lets make styles for form box */
+
 .t-signin-box {
-  border: 1px solid var(--t-blue-800);
-  background: var(--t-blue-950);
+  background: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1rem 2rem;
+  box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2.5rem;
   border-radius: 3px;
 }
 
-.t-signin-box h2 {
-  text-transform: capitalize;
-  font-size: 30px;
+/* Styles for the title of registration page */
+.t-signin-box > h1 {
+  letter-spacing: -1.2px;
+  font-family: Manrope;
+}
+.t-signin-box > span {
+  font-family: Manrope;
   font-weight: 600;
+  color: #343434;
+  position: relative;
+  font-size: 14px;
 }
-.t-signin-box #t-s-separator {
-  background: var(--t-blue-700);
-  display: block;
+#t-signin-form {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Styles for <form> container */
+
+.t-s-row-1,
+.t-s-row-2,
+.t-s-row-3,
+.t-s-row-4 {
+  position: relative;
+  margin: 1.3rem 0 0 0;
+}
+
+.t-s-row-1 input,
+.t-s-row-2 input,
+.t-s-row-3 input,
+.t-s-row-4 input {
   width: 100%;
-  height: 2px;
-  margin: 2rem 0rem;
-}
-/* Let's make .t-s-row-3 and .t-s-row-4 relative containers */
-.t-s-row-3, .t-s-row-4 {
-    position: relative;
-}
-/* Styles for input fields */
-input[type="email"],
-input[type="password"],
-input[name="phone"],
-input[name="name"] {
-  width: 15rem;
-  padding: 0.7rem 1.9rem;
-  margin: 0 0 2rem 0rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 3px;
-  background-color: var(--t-blue-900);
+  background: #f9f9f9;
+  padding: 0.8rem 1rem;
+  outline: none;
+  font-family: "Poppins";
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 15px;
+}
+
+.t-s-row-1 input::placeholder,
+.t-s-row-2 input::placeholder,
+.t-s-row-3 input::placeholder,
+.t-s-row-4 input::placeholder {
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+
+/* Styles for register form */
+.t-s-row-5 {
+  margin: 1rem 0
+}
+.t-s-row-5 button {
+  width: 100%;
+  padding: .89rem 0;
+  font-family: "Poppins",sans-serif;
+  text-transform: capitalize;
+  background: var(--t-blue-600);
   border: none;
-  color: #858585
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 15px;
+  margin: 1rem 0 0 0;
 }
-input[type="email"] {
-    background-image: url('../../assets/svg/email.svg');
-}
-/* Styles for input name field */
-input[name="name"] {
-  background-image: url("../../assets/svg/text.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-input[name="name"]::placeholder {
-  color: #858585;
-}
-/* Styles for phone input field */
-input[name="phone"] {
-  background-image: url("../../assets/svg/phone.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-input[name="passwordConfirm"] {
-    background-image: url('../../assets/svg/lock1.svg');
-}
- 
-.t-s-row-3::after, .t-s-row-4::after {
-    content: '';
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    right: 1rem;
-    top: .7rem;
-    background-image: url('../../assets/svg/eyes.svg');
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-/*Styles for 'terms & conditions' input */
+/* Styles for the login link */
 .t-s-row-6 {
-    font-size: 13px;
-    font-weight: 300;
-    margin: 1rem 0;
+  display: flex;
+  align-items: center;
 }
-/* Styles for create button component */
-.t-s-row-7 button  {
-    padding: .8rem 1rem;
-    width: 100%;
-    font-family: "Poppins", sans-serif;
-    text-transform: capitalize;
-    background: var(--t-blue-700);
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all .15s linear;
-    margin: 1.5rem 0;
-    font-size: 15px;
+.t-s-row-6 span {
+  font-family: "Poppins", sans-serif;
+  color: rgba(0, 0, 0, .8);
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 500;
+
 }
-.t-s-row-7 button:hover {
-    background: var(--t-blue-200);
-    color: #222;
-    font-weight: 600;
+.t-s-row-6 a {
+  color: var(--t-blue-600);
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: .5rem;
 }
