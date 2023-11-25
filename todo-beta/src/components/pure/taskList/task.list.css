@@ -2,49 +2,13 @@
 
 .t-container { 
     position: relative;
-    padding: 1rem 6rem; /* Imporntntae to establecing the padding */
-}
-.t-title { 
-    font-family: Manrope;
-    font-weight: 800;
-    color: rgba(0, 0, 0, .8);
-    font-size: 50px; /* important for the responsive disign, view here */
+    padding: 1rem 10rem !important; /* Imporntntae to establecing the padding */
+    background: var(--background-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem 2rem !important;
 }
 
-
-
-
-/* LEt's make styles for 'add' button for the tasks */
-.t-btn-add {
-  background: var(--t-blue-700);
-  width: 120px;
-  height: 120px;
-  position: fixed;
-  border-radius: 3px;
-  bottom: 5rem;
-  right: 6rem;
-  border: none;
-  outline: none;
-  font-size: 80px;
-  transition: all 0.3s ease-in;
-  text-align: center;
-  cursor: pointer;
-}
-
-.active-cross-btn { 
-  background: transparent;
-  transform: rotate(45deg) scale(.9);
-}
-
-/* Styles for the main task list table */
-
-table {
-  border: 1px solid #EAECF0;
-  width: 100%;
-  font-family: Montserrat;
-  border-collapse: collapse;
-  box-shadow: 0 0 6px 1px rgba(0, 0, 0, .1);
-}
 
 
 

@@ -1,14 +1,8 @@
 import { connect } from 'react-redux'
 import { filterTodosAction } from '../../redux/actions';
-import FilterButton from '../pure/filter/FilterButton'
+import FilterOption from '../pure/FilterOption';
 
-
-// const mapStateToProps = (state) => {
-//     return { 
-//         todos: filterTodos(state.todoState, type),
-//     }
-// }
-
+// Este es un me todo para despachar metodos | acciones hacia el props de un componente.
 const mapDispatchToProps = (dispatch, ownProps) => {
     return { 
         onFilter: () => {
@@ -17,6 +11,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-const FilterContainer = connect(null, mapDispatchToProps)(FilterButton);
+// const FilterContainer = connect(null, mapDispatchToProps)(FilterButton);
+const FilterContainer = connect(null, mapDispatchToProps)(FilterOption);
 
 export default FilterContainer;

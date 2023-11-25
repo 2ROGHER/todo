@@ -1,97 +1,123 @@
-
-
-
-/* Hidden list-style-type form <tbody> element */
-
-
-tbody.t-table-body {
-    /* border: 1px solid blue; */
-    font-weight: 500;
-    color: hsla(221, 13%, 46%, .8)
+.t-list-container {
+  background: #222; /* this will be a variable in root*/
+  color: #c4c4c4 !important; /* This will be a variable in root*/
+  font-family: Manrope;
+  padding: 2rem 1rem 4rem 1rem !important;
+  border-radius: 5px;
+  border: 1px solid var(--border-color); /* for default value color*/
+  position: relative;
+  transition: all 1s linear;
 }
 
-.t-table-body tr {
-    background: #fff;
-    border-bottom: 1px solid #EAECF0;
+.t-list-title {
+  font-size: var(--size-s-2);
+  color: #dfdfdf !important;
+  font-weight: 600;
+}
+.t-list-desc {
+  font-weight: 300;
+}
+/** Styles for created date in task **/
+
+.t-list-created {
+  font-size: 11px;
+  margin: 6rem 0 0rem 0;
+  border: 1px solid var(--border-color);
+  padding: .3rem .2rem;
+  border-radius: 10px;
 }
 
-.t-table-body tr td {
-    padding: .1rem 1rem;
+/**** This style change the line style for completed tasks *****/
+.task-completed { 
+  text-decoration: line-through;
 }
-/* Let's align center the select columns */
+/* styles for completed icon */
+.t-list-container > span, .t-list-i-completed {
+  position: absolute;
+  top: .5rem;
+  
+}
+.t-list-i-completed {
+  right: .8rem;
+  visibility: hidden;
 
-
-.t-table-body tr td:nth-child(2) {
-    overflow: hidden;
-    width: 260px;
 }
-.t-table-body tr td:nth-child(2) {
-    overflow: hidden;
-    width: 260px;
-}
-/* Let's make styles for completed task mode */
-.completed-task td {
-    background: #515159;
-    color: #999;
-}
-tr.completed-task td:nth-child(-n+5) {
-    text-decoration: line-through;
+#t-done-icon {
+  fill: var(--success-fill-color);
+  font-size: var(--icon-h-s-0);
 }
 
-tr.completed-task td:nth-child(n+6) > button{
-    background: #444;
-    color: #999;
+/** Styles for footer menu of card for task list **/
+.t-list-footer-menu {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0.2rem;
+  width: 100%;
+  left: 0;
+  visibility: hidden;
 }
-tr.completed-task .t-btn-edit { 
-    cursor: not-allowed;
-}
-
-/* Styles for the delete and update buttons */
-.t-btn-edit, .t-btn-delete {
-    font-family: "Poppins";
-    outline: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    width: 50px;
-    height: 50px;
-}
-tbody tr td:nth-child(7) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.t-btn-edit > svg {
-    stroke: rgba(0, 0,0, .7);
-    font-size: 18px;
+/** Styles to hover container to list items **/
+.t-list-container:hover .t-list-footer-menu,
+.t-list-container:hover .t-list-i-completed {
+  visibility: visible !important;
 }
 
- .t-btn-delete > svg {
-    fill: rgba(0, 0, 0, .7);
-    font-size: 18px;
- }
-
-
-.t-btn-edit { 
-    margin-right: 2rem;
+#t-i-1,
+#t-i-2,
+#t-i-3,
+#t-i-4,
+#t-i-5 {
+  flex: 14% 1;
+  text-align: center;
+  padding: 0.5rem 0;
 }
 
-.t-btn-edit:hover {
-   
+#t-i-6 {
+  flex: 40% 1;
+  text-align: right;
+  padding: 0 0.8rem 0 0;
 }
 
-.t-btn-delete:hover {
-   
-}
-.t-btn-delete { 
-    
+.t-list-footer-menu div svg {
+  cursor: pointer;
 }
 
-/* Styles for the icons */
-td:nth-child(n+7) button svg {
-    margin-right: .5rem;
-}  
+/** Styles fot he side menu bar **/
 
+
+.t-list-sidemenu {
+  display: none;
+  position: absolute;
+  width: 200px;
+  background: #222;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  right: -120px;
+  font-size: 14px;
+  z-index: 10000;
+  overflow: hidden;
+}
+.active-sidemenu  {
+  display: block;
+}
+.ative-sidemenu.t-list-footer-menu {
+  display: block;
+}
+.t-list-sidemenu div {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.t-list-sidemenu div svg {
+  flex: 20% 1;
+}
+
+.t-list-sidemenu div span {
+  flex: 80% 1;
+  text-align: left;
+}
+.t-list-sidemenu div:hover {
+  background: #292929;
+}

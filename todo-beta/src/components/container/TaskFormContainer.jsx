@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import TaskForm from '../pure/TaskForm'
+import TaskForm from '../pure/form/TaskForm';
 import { addTask } from '../../redux/actions';
 
 const mapStateToProps = (state ) => {

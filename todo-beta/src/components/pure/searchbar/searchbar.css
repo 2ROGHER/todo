@@ -1,23 +1,25 @@
 .t-searchbar-container {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 0;
+  right: 0; */
 }
 
 .t-searchbar-container input {
   width: 400px;
-  padding: .9rem 2.5rem;
+  padding: .9rem 3.3rem;
   outline: none;
-  border: 1px solid #e6e6e6;
-  background-color: #f9f9f9;
-  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #4d4d4d;
+  background: #222;
+  color: rgba(255, 255, 255, .6);
   font-size: 15px;
-  font-family: "Poppins";
+  font-family: Manrope;
    background-image: url("../../../assets/svg/search.svg");
   background-repeat: no-repeat;
   background-position: 15px center;
-  font-weight: 500;
+  font-weight: 400;
 }
-
+.t-searchbar-container input::placeholder {
+  color: rgba(255, 255, 255, .6);
+}

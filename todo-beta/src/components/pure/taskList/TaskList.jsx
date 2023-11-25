@@ -1,13 +1,8 @@
 import PropTypes from "prop-types";
 import Task from "./Task";
-import TaskFormContainer from "../../container/TaskFormContainer";
 // css styles for TaskListComponent.
 import "./task.list.css";
 
-import FilterBar from '../filter/FilterBar';
-import HeaderList from "../../pure/headerListTable/HeaderList";
-import LoginVerification from "../login.popup/LoginVerification";
-import LoginVerificationContainer from "../../container/LoginVerificationContainer";
 import { useState } from "react";
 
 /**
@@ -70,28 +65,38 @@ const TaskList = ({
       : null;
     // document.querySelector('.t-body-container').classList.add('t-body-container')
   };
-  return (
-    <div className="t-container">
-      {/* {loginUser ? <LoginVerificationContainer /> : null} */}
 
-      <h1 className="t-title">Tasks for today</h1>
-      <button onClick={handleClick} className="t-btn-add">
+  /**
+   * This function allows us to show or hidden the 'side menubar' for 
+   * more options in the task list.
+   * This function is passed to child component through down props.
+   
+   * @param {number} value This value allow us to identify a determinate 
+      task from all task in the list.
+   */
+  const openSideMenubar = (value) => {
+    document
+      .getElementById(`t-sidemenu-${value}`)
+      .classList.toggle("active-sidemenu");
+  };
+  return (
+    <main className="t-container">
+      {/* {loginUser ? <LoginVerificationContainer /> : null} */}
+      {/* <button onClick={handleClick} className="t-btn-add">
         <span id="cross">&#43;</span>
-      </button>
-      <FilterBar />
-      <TaskFormContainer />
+      </button> */}
+      {/* <FilterBar /> */}
+
       {/* Here goes the header list */}
-      <table>
-        <HeaderList />
-        <Task
-          data={todos}
-          onDeleteTask={deleteTaskAction}
-          onHandleUpdateTask={handleUpdateTask}
-          onCompleted={completeTaskAction}
-          handleEditTask={handleEditTask}
-        />
-      </table>
-    </div>
+      <Task
+        data={todos}
+        onDeleteTask={deleteTaskAction}
+        onHandleUpdateTask={handleUpdateTask}
+        onCompleted={completeTaskAction}
+        handleEditTask={handleEditTask}
+        onOpenSideMenubar={openSideMenubar}
+      />
+    </main>
   );
 };
 

@@ -3,7 +3,7 @@
 #root {
   margin: 0 auto;
   position: relative;
-  background: #fff;
-  color: #000 !important;
+  height: 100vh;
+  overflow: hidden;
 }
 

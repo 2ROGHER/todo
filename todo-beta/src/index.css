@@ -10,6 +10,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  height: 100vh;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -19,8 +20,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* measures for icons */
+  --icon-h-s-0: 18px;
+  --icon-h-s-1: 20px;
+  --icon-h-s-2: 26px;
+  --icon-h-m-1: 32px;
+  --icon-h-m-2: 48px;
+  --icon-h-l: 64px;
+  /* border-colors */
+
+  --input-border: #4d4d4d;
+  --border-color: #3f3f3f;
   /* palete color to design */
-  --index-color: #fafafa;
+  --icon-color-theme: #afafaf;
+  --background-color: #2b2b2b;
   --t-blue-25: #f5fbff;
   --t-blue-50: #f0f9ff;
   --t-blue-100: #e0f2fe;
@@ -32,12 +45,36 @@
   --t-blue-700: #026aa2;
   --t-blue-800: #065986;
   --t-blue-900: #0b4a6f;
+
+  /** sizes **/
+  --size-s-0: 12px;
+  --size-s-1: 16px;
+  --size-s-2: 20px;
+  --size-m-1: 24px;
+
+  --test: #d5fbfc;
+/**** Alert colors  ****/
+--success-stroke-color: #2DC071;
+--success-fill-color: #76D8A3;
+--delete-stoke-color: #DF1E1E;
+--delete-fill-color: #FFDEDE;
+--alert-stroke-color: #E77C40;
+--alert-fill-color: #FFF6EF;
+  /**** 
+
+  - FONTS: 
+  Manrope: Body content
+  Poppins: buttons
+  Montserrat: 
+
+  ****/
 }
 
 body {
+  background: #2b2b2b;
   margin: 0;
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: var(--index-color);
+  background: var(--background-color);
 }
