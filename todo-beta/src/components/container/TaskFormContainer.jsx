@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch) => {
     addTaskAction: (task) => {
       dispatch(addTask(task));
     },
-  };
+  }
 };
 const TaskFormContainer = connect(mapStateToProps, mapDispatchToProps)(TaskForm);
 

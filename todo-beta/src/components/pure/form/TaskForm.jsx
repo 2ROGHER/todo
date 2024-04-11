@@ -122,6 +122,7 @@ const TaskForm = ({ todo, addTaskAction }) => {
 
 TaskForm.propTypes = {
   addTaskAction: PropTypes.func.isRequired,
+  todo: PropTypes.object,
 };
 
 export default TaskForm;

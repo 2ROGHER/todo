@@ -6,6 +6,8 @@ import Alert from "../../layouts/alerts/Alert";
 import { AiOutlineStop } from "react-icons/ai";
 import { MdOutlineDoneOutline } from "react-icons/md";
 import TaskForm from "../../components/pure/form/TaskForm";
+import TaskFormContainer from "../../components/container/TaskFormContainer";
+import FilterContainer from "../../components/container/FilterContainer";
 
 // These are all styles fot home page
 const homeStyles = {
@@ -23,9 +25,10 @@ function Home() {
         stroke={"#2DC071"}
         fill={"#384b3f"}
       /> */}
+      
       <Nav />
       <FilterBar />
-      <TaskForm />
+      <TaskFormContainer />
       <TaskContainer />
     </div>
   );

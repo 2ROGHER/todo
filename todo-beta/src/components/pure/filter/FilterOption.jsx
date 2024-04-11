@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // "--c": "#b5fbfe"
-const FilterOption = ({ text, color, icon }) => {
+const FilterOption = ({ text, color, icon, onFilterAction}) => {
   return (
-    <li style={{ "--c": `${color}` }}>
+    <li style={{ "--c": `${color}` }} onClick={onFilterAction}>
       {icon}
       <span>{text}</span>
     </li>
