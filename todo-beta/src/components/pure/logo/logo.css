@@ -1,9 +1,0 @@
-/* Styles for the logo of the <Login/> component */
-.t-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.t-logo img {
-  height: 70px
-}

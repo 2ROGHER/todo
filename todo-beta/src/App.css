@@ -1,9 +1,0 @@
-@import url('./index.css');
-
-#root {
-  margin: 0 auto;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
