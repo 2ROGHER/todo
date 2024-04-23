@@ -1,0 +1,27 @@
+/* Import fonts by https://googlefonts.com/ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300..700&display=swap");
+* {
+  margin: 0;  
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-frame);
+  font-family: "Poppins";
+}
+:root {
+  --bg-frame:#fafafa;
+  --border-color: #CED0D6;
+  --text-color: #222222;
+  --btn-bg-color: #fff;
+  --hover-color: #f2f2f2;
+
+  /* Base color for notes*/
+  --bg-note-1: #C8EAF8;
+  --bg-note-2: #F8EDC8;
+  --bg-note-3: #F8DFC8;
+  --bg-note-4: #EEEEEE;
+
+  /* font-size varibles */
+  --h1: 61px;
+}

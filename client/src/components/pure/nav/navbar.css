@@ -1,0 +1,18 @@
+nav.navbar {
+    position: relative;
+    padding: 16px 32px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* This is importante for media queriese */
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+#logo {
+    display: flex;
+    align-items: center;
+}
+.navbar section.options {
+   display: flex;
+   justify-content: end;
+   align-items: center;
+}

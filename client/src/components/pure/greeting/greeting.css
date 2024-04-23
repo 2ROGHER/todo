@@ -1,0 +1,16 @@
+.greeting {
+      margin: 46px 0px;
+      
+}
+
+.name h1 {
+    font-size: 61px;
+    text-transform: capitalize;
+}
+
+.date h3 {
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: -1px;
+}

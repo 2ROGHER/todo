@@ -1,0 +1,32 @@
+@import url("../../../index.css");
+
+.btn-filter {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.text {
+  position: relative;
+  font-family: "Quicksand";
+  font-weight: 700;
+  color: #222;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  text-transform: uppercase;
+  padding: 8px 16px;
+  color: #3e4c61;
+  background: #fff;
+  border-radius: 4px 0 0 4px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  background: #f5f5f5;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}

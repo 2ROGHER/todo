@@ -1,0 +1,41 @@
+@import url("../../../../index.css");
+
+.quick-access {
+  display: flex;
+  padding: 0px 24px 0px 0px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  gap: 8px;
+  border-radius: 100px 100px;
+  border: 1px solid var(--border-color);
+  background: var(--btn-bg-color);
+}
+
+.btn-quick-access {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.active {
+  border-radius: 100%;
+  background: #d8edff;
+}
+
+.separate-line {
+  width: 2px;
+  height: 55px;
+  background: var(--border-color);
+  border-radius: 4px;
+
+}

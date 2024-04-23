@@ -1,8 +1,17 @@
 {
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
   "extends": [
-    "development"
+    "development",
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "hints": {
     "typescript-config/is-valid": "off"
   }
+  // some rules for proyect
+  
 }

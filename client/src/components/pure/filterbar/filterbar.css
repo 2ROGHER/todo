@@ -1,0 +1,13 @@
+.filterbar {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.properties, .tag {
+    display: flex;
+    gap: 16px
+}
+
+.tag {
+    justify-content: end;
+}
+

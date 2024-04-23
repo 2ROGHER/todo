@@ -1,0 +1,38 @@
+@import url('../../../index.css');
+.control {
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    padding: 8px 16px;
+    font-family: "Quicksand";
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #384250;
+    background: #fff;
+}
+.control > div {
+    display: flex;
+    gap: 8px;
+    margin: 0 auto 0 0; 
+}
+.column-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 20px;
+    background: red;
+    border-radius: 100px 100px;
+    color: #fff;
+}
+.menu-icon {
+    background: red;    
+    align-items: center;
+    justify-content: right;
+}
