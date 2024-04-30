@@ -5,19 +5,18 @@ interface ControlButtonProps {
   text: string;
   quantity: number;
   color?:string;
+  quantityColor: string;
 }
 
-const ControlButton: React.FC<ControlButtonProps> = ({ text, quantity, color }) => {
+const ControlButton: React.FC<ControlButtonProps> = ({ text, quantity, color, quantityColor }) => {
   return (
     <div className="control">
       <div>
         <div className="column-color" style={{background: color}}></div>
         <div>{text}</div>
-        <div className="quantity">{quantity}</div>
+        <div className="quantity" style={{background: quantityColor}}>{quantity}</div>
       </div>
       <div className="menu-icon">
-      <div>hola</div>
-      <div>hola</div>
         <svg
           width="4"
           height="16"

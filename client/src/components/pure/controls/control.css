@@ -1,6 +1,0 @@
-.control-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 8px;
-    margin: 32px 0 0 0;
-}

@@ -1,19 +1,53 @@
-import ControlsContainer from "../../components/container/ControlsContainer";
 import FilterbarContainer from "../../components/container/FilterbarContainer";
 import GreetingContainer from "../../components/container/GreetingContainer";
 import NavContainer from "../../components/container/NavContainer";
+import NewTaskButton from "../../components/modules/newtaskbutton/NewTaskButton";
+import ControlButton from "../../components/modules/controlsbutton/ControlButton";
+import "./home.css";
 
-const style = {
-  padding: "0px 112px",
-}
 export default function Home() {
   return (
     <>
       <NavContainer />
-      <main style={style}>
+      <main className="main">
         <GreetingContainer />
         <FilterbarContainer />
-        <ControlsContainer />
+
+        <section className="task-section m-t-32">
+          <ControlButton
+            text="to do"
+            quantity={2}
+            color="#0AFAF2"
+            quantityColor="#306CC7"
+          />
+          <ControlButton
+            text="in proccess"
+            quantity={4}
+            color="#FAAA0A"
+            quantityColor="#0AB6FA"
+          />
+          <ControlButton
+            text="pending"
+            quantity={2}
+            color="#1E8BE4"
+            quantityColor="#563EA5"
+          />
+          <ControlButton
+            text="completed"
+            quantity={8}
+            color="#9A3EA5"
+            quantityColor="#945E41"
+          />
+
+          <div className="main-col-1 bg">
+            <NewTaskButton />
+          </div>
+          <div className="main-col-2 bg">
+            {/* Here we're going to list all  todo tasks. */}
+          </div>
+          <div className="main-col-3"></div>
+          <div className="main-col-4"></div>
+        </section>
       </main>
     </>
   );

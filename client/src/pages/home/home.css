@@ -1,0 +1,10 @@
+.main {
+  margin: 0px 112px;
+}
+
+.task-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
