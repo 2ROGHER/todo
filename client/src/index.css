@@ -27,35 +27,13 @@ body {
 }
 
 /* Button styles */
-.p-8-16 {
-  padding: 8px 16px;
-}
 
-.bg {
-  background: red;
-}
-
-.p-16-32 {
-  padding: 16px 32px
-}
-
-.m-l-16 {
-  margin-left: 16px;
-}
-
-.m-l-8 {
-  margin-left: 8px;
-}
-
-.m-t-32 {
-  margin-top: 32px;
-}
-
-.m-t-48 {
-  margin-top: 48px;
-}
 .btn-bg-color {
   background: #fff;
+}
+
+.border {
+  border-radius: 4px;
 }
 
 .btn-border {
@@ -78,11 +56,39 @@ body {
 }
 
 /* Text class Styles */
-.text-family-qs {
+.text-size-16 {
+  font-size: 16px;  
+}
+
+.text-size-28 {
+  font-size: 28px;
+}
+.text-size-49 {
+  font-size: 49px;
+}
+
+
+
+.font-family-qs {
   font-family: "Quicksand";
+}
+
+.letter-spacing-1 {
+  letter-spacing: -1px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: -2px;
+}
+.letter-spacing-3 {
+  letter-spacing: -3px;
 }
 .text-color {
   color: #384250;
+}
+
+.text-color-black {
+  color: #222;
 }
 
 .text-weight-5 {
@@ -120,3 +126,134 @@ body {
   font-weight: 600;
   letter-spacing: -1%;
 }
+
+/* margins */
+.m-16 {
+  margin: 16px 0px
+}
+
+.m-32 {
+  margin: 32px 0px
+}
+
+.m-48 {
+  margin: 48px 0px;
+}
+
+.m-l-16 {
+  margin-left: 16px;
+}
+
+.m-l-8 {
+  margin-left: 8px;
+}
+
+.m-t-32 {
+  margin-top: 32px;
+}
+
+.m-b-16 {
+  margin-bottom: 16px;
+}
+
+.m-b-32 {
+  margin-bottom: 32px;
+}
+
+.m-t-48 {
+  margin-top: 48px;
+}
+
+.m-r-8 {
+  margin-right: 8px;
+}
+.m-r-16 {
+  margin-right: 16px;
+}
+
+/* Padding */
+.p-16 {
+  padding: 16px 16px;
+}
+
+.p-8-16 {
+  padding: 8px 16px;
+}
+
+.bg {
+  background: red;
+}
+
+.p-16-32 {
+  padding: 16px 32px
+}
+
+/* Align  & display items */
+.flex {
+  display: flex;
+}
+
+.flex-gap-4 {
+  display: flex;
+  gap: 4px;
+}
+
+.flex-gap-8{
+  display: flex;
+  gap: 8px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-align-rigth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.flex-space-around {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* cursor styles */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* text-styles */
+.text-underline {
+  text-decoration: underline;
+}
+
+/* Colors */
+.default-color-1 {
+  background: #C8EAF8;
+}
+
+.default-color-2 {
+  background: #F8DFC8;
+}
+
+.default-color-3 {
+  background: #C8F8CD;
+}
+
+.default-color-4 {
+  background: #EEEEEE;
+}
+
+.boder-color {
+  color: #CED0D6;
+}
+

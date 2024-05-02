@@ -4,6 +4,7 @@ import NavContainer from "../../components/container/NavContainer";
 import NewTaskButton from "../../components/modules/newtaskbutton/NewTaskButton";
 import ControlButton from "../../components/modules/controlsbutton/ControlButton";
 import "./home.css";
+import TaskList from "../../components/container/TaskList";
 
 export default function Home() {
   return (
@@ -39,14 +40,17 @@ export default function Home() {
             quantityColor="#945E41"
           />
 
-          <div className="main-col-1 bg">
+          <div className="main-col-1 p-16">
             <NewTaskButton />
+            {/* Here all list for display in Home page */}
+            <TaskList />
           </div>
-          <div className="main-col-2 bg">
+          <div className="main-col-2 p-16 ">
             {/* Here we're going to list all  todo tasks. */}
+            <TaskList />
           </div>
-          <div className="main-col-3"></div>
-          <div className="main-col-4"></div>
+          <div className="main-col-3 p-16"></div>
+          <div className="main-col-4 p-16"></div>
         </section>
       </main>
     </>

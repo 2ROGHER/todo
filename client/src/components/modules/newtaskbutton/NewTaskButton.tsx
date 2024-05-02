@@ -3,7 +3,7 @@ import "./newtaskbutton.css";
 
 const NewTaskButton = (): JSX.Element => {
   return (
-    <div className="p-8-16  btn-bg-color btn-align-center text-upper text-weight-6 text-color text-family-qs btn-border">
+    <div className="p-8-16  btn-bg-color btn-align-center text-upper text-weight-6 text-color text-family-qs btn-border m-b-16">
       <span>
         <svg
           width="16"

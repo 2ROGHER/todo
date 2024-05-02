@@ -8,3 +8,18 @@
   gap: 8px;
 }
 
+.main-col-1 {
+  background: rgba(10, 250, 242, .1) ;
+}
+
+.main-col-2 {
+  background: rgba(250, 170, 10 , .1)
+}
+
+.main-col-3 {
+  background: rgba(10, 30, 50 , .1);
+}
+
+.main-col-4 {
+  background: rgba(154, 62, 165, .1);
+}
