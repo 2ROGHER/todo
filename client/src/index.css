@@ -26,6 +26,11 @@ body {
   --h1: 61px;
 }
 
+/* backgrounds */
+.bg-color-white {
+  background: #fff;
+}
+
 /* Button styles */
 
 .btn-bg-color {
@@ -90,25 +95,25 @@ body {
 .text-color-black {
   color: #222;
 }
-
-.text-weight-5 {
+/* font-weights */
+.font-weight-5 {
   font-weight: 500;
 }
 
 
-.text-weight-6 {
+.font-weight-6 {
   font-weight: 600;
 }
 
-.text-weight-7 {
+.font-weight-7 {
   font-weight: 700;
 }
 
-.text-weight-8 {
+.font-weight-8 {
   font-weight: 800;
 }
 
-.text-weight-9 {
+.font-weight-9 {
   font-weight: 900;
 }
 .text-hover-color {
@@ -126,7 +131,33 @@ body {
   font-weight: 600;
   letter-spacing: -1%;
 }
+/* widht  & height */
+.w-8 {
+  width: 8px;
+}
 
+.w-16 {
+  width: 16px;
+}
+
+.w-24 {
+  width: 24px;
+}
+.w-32 {
+  width: 32px;
+}
+
+.h-8 {
+  height: 8px;
+}
+
+.h-16 {
+  height: 16px;
+}
+
+.h-32 {
+  height: 32px;
+}
 /* margins */
 .m-16 {
   margin: 16px 0px
@@ -198,9 +229,20 @@ body {
   gap: 4px;
 }
 
-.flex-gap-8{
+.flex-gap-8 {
   display: flex;
   gap: 8px;
+}
+
+/* flex-direction */
+.flex-direction-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-direction-column{
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-center {
@@ -214,17 +256,42 @@ body {
   align-items: center;
 }
 
-.flex-align-rigth {
+/* .flex-align-rigth {
   display: flex;
   align-items: center;
   justify-content: center;
   
-}
-.flex-space-around {
+} */
+.flex-space-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* absolute positioning */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.absolute-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.absolute-top-left {
+  top: 0;
+  left: 0
+}
+.absolute-top-right {
+  top: 48px;
+  right: 16px;
+}
+
 
 /* cursor styles */
 .cursor-pointer {

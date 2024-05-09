@@ -5,6 +5,7 @@ import NewTaskButton from "../../components/modules/newtaskbutton/NewTaskButton"
 import ControlButton from "../../components/modules/controlsbutton/ControlButton";
 import "./home.css";
 import TaskList from "../../components/container/TaskList";
+import NewTask from "../../components/pure/newtask/NewTask";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
 
           <div className="main-col-1 p-16">
             <NewTaskButton />
+            <NewTask />
             {/* Here all list for display in Home page */}
             <TaskList />
           </div>

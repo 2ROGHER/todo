@@ -1,0 +1,39 @@
+#tag,
+#title
+,#description {
+    display: flex;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+
+#tag {
+  font-size: 28px;
+  text-decoration: underline;
+  font-weight: 600;
+  width: 100%;
+  color: #222;
+  font-family: "Poppins";
+}
+
+#tag::placeholder {
+    color: #222;
+}
+
+#title {
+  font-size: 61px;
+  width: 100%;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+#description {
+    width: 100%;
+  font-size: 16px;
+  font-family: "Quicksand";
+  font-weight: 600;
+}
+#description::placeholder {
+    color: #222;
+}
+
